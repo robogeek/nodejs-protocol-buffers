@@ -1,0 +1,19 @@
+{
+  "name": "protobuf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "protoc": "protoc --js_out=import_style=commonjs,binary:. todo.proto",
+    "pbjs": "mkdir -p dist-pbjs && pbjs -t static-module -w commonjs -o dist-pbjs/todo.js todo.proto"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-protobuf": "^3.21.0",
+    "mitata": "^0.1.6",
+    "protobufjs": "^7.0.0",
+    "protobufjs-cli": "^1.0.0"
+  }
+}

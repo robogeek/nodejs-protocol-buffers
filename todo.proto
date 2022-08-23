@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+enum Precedence {
+    PRECEDENCE_NONE = 0;
+    PRECEDENCE_LOW = 1;
+    PRECEDENCE_MEDIUM = 2;
+    PRECEDENCE_HIGH = 3;
+}
+
+message Todo {
+    int64 id = 1;
+    string title = 2;
+    string body = 3;
+    Precedence precedence = 4;
+}
+
+message Todos {
+    repeated Todo todos = 1;
+}
